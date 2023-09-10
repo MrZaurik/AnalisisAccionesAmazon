@@ -11,7 +11,7 @@ ggplot(data = datos, aes(x = Date, y = Close)) +
 ggplot(data = datos, aes(x = Date, y = Volume)) +
   geom_bar(stat = "identity", fill = "blue") +
   labs(x = "Fecha", y = "Volumen de Operaciones", title = "Volumen de Operaciones de Amazon por Fecha") +
-  scale_y_continuous(labels = scales::comma)  # Utiliza 'comma' para separadores de miles
+  scale_y_continuous(labels = scales::comma)
 
 datos_filtrados <- datos[datos$Date >= as.Date("2023-01-01") & datos$Date <= as.Date("2023-09-01"), ]
 
